@@ -13,7 +13,7 @@ WORKDIR /tmp
 RUN git clone -b 13.0 --depth=1 https://github.com/Odoo-BR/odoo-brasil.git \
  && find */* -maxdepth 0 -type d -exec mv '{}' /mnt/br-localization \; \
  && rm -rf /tmp/* \
- && chown -R odoo:odoo /mnt/*
+ && chown -R odoo:root /mnt/*
 
 WORKDIR /mnt
 USER odoo
