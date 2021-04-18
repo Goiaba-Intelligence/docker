@@ -3,7 +3,7 @@ FROM odoo:14.0
 ADD odoo.conf /etc/odoo/odoo.conf
 
 USER root
-RUN apt update && apt install --no-install-recommends -y git openssh-server \
+RUN apt update && apt install --no-install-recommends -y git openssh-server rustc \
   && rm -rf /var/lib/apt/lists/* \
   && mkdir -m 600 /root/.ssh \
   && mkdir -m 755 /mnt/br-localization \
